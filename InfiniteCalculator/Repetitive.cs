@@ -108,6 +108,7 @@ namespace InfiniteCalculator
                 return result;
             }
         }
+        // to avoid repetitive code up there in multiplying
         public static void SimpleMultiply(int[] a, int[] b,ref int multiplier,ref int saveMultiplier, int[] result ,ref int overflow)
         {
             for (int i = a.Length - 1; i >= 0; i--)

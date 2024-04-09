@@ -139,6 +139,7 @@ namespace InfiniteCalculator
         // multiplying a and b below
         public static Infinite Times(Infinite a,Infinite b)
         {
+            // if both operators are negative
             if (a.Negativity == true && b.Negativity == true)
             {
                 return new Infinite()
@@ -147,6 +148,7 @@ namespace InfiniteCalculator
                     Negativity = false
                 };
             }
+            // if one of operators is negative and another positive
             else if ((a.Negativity == true && b.Negativity == false) || (a.Negativity == false && b.Negativity == true))
             {
                 return new Infinite()
@@ -155,6 +157,7 @@ namespace InfiniteCalculator
                     Negativity = true
                 };
             }
+            // if both operators are positive
             else if (a.Negativity == false && b.Negativity == false)
             {
                 return new Infinite()
